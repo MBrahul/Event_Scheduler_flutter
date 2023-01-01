@@ -51,30 +51,30 @@ class _MyHomePageState extends State<MyHomePage> {
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white),
                       height: 80,
-                      child: Stack(children: [
-                        Positioned(
-                          child: Center(
-                            child: Text(
-                              events[index][0].toUpperCase(),
-                              style: const TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600,
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Center(
+                              child: Text(
+                                events[index][0].toUpperCase(),
+                                style: const TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
-                          ),
-                        ),
-                        Positioned(
-                            bottom: 2,
-                            right: 10,
-                            child: Text(
+                            const SizedBox(
+                              height: 7,
+                            ),
+                            Text(
                               events[index][1],
                               style: const TextStyle(
                                 fontSize: 17,
                                 fontWeight: FontWeight.w500,
                                 color: Colors.deepPurple,
                               ),
-                            ))
-                      ]),
+                            )
+                          ]),
                     );
                   },
                   separatorBuilder: (context, index) {
